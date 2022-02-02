@@ -12,10 +12,10 @@ function getRandomHexColor() {
 startBtn.addEventListener('click', changeBcgColor)
 
 function changeBcgColor() {
+    startBtn.setAttribute("disabled", true)
+    stopBtn.removeAttribute("disabled")
     timerID = setInterval(() => {
         body.style.backgroundColor = getRandomHexColor();
-        startBtn.setAttribute("disabled", true)
-        stopBtn.removeAttribute("disabled")
     }, 1000)
     
 }
